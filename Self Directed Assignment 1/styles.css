@@ -1,0 +1,141 @@
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: OpenSansBold;
+    src: url(fonts/OpenSans-Bold.ttf);
+}
+
+* {
+    font-family: OpenSans;
+    margin: 0;
+    padding: 0;
+    
+}
+
+html{ 
+    background-color: #d5d5d5;
+}
+
+b {
+    font-family: OpenSansBold;
+    background: none;
+}
+
+body {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* ----- HEADERS ----- */
+h1 {
+    padding-top: 2vh;
+    font-size: 30pt;
+}
+
+h2 {
+    padding-top: 2vh;
+    padding-bottom: 3vh;
+    font-size: 18pt;
+    color: grey;
+}
+/* ----- PHOTO GALERY ----- */
+/* Layout */
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:20px;
+}
+
+.gridImage {
+    width: 100%
+}
+.toronto { 
+    grid-row-start: 1;
+    grid-row-end: 1 ;
+}
+
+.cnTower {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.rogersCenter {
+    grid-row-start: 1;
+    grid-row-end: span 1;
+}
+.oldCity {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.rom {
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.cityHall {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+/* Design */
+.gridItem {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+}
+
+ .gridItem .overlay {
+    background: linear-gradient(to bottom right, white 50%, rgba(255, 255, 255, 0) 50%);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.gridItem:hover .overlay {
+    opacity: .65;
+}
+
+.itemDesc {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    max-width: 45%;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;;
+}
+
+.gridItem:hover .itemDesc {
+    opacity: 1;
+}
+
+.itemDesc p {
+    color: black;
+    font-size: 13pt;
+}
+
+/* ----- SOCIAL MEDIA LINKS ----- */
+.socials {
+    padding-top: 1vh;
+}
+
+.fab {
+    text-decoration: none;
+    color: black;
+    font-size: 20pt;
+    padding: 7px;
+}
+
+.fab:hover {
+    color: rgb(34, 66, 145);
+}
